@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Calculator</title>
+  <link rel="stylesheet" href="style.css"> 
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="favicon.png">
+</head>
+<body class="highschool-mode">
+  <!-- Title -->
+  <h1 class="page-title">Grade Calculator</h1>
+
+  <!-- Mode buttons -->
+  <div class="mode-switch">
+    <button id="highschoolBtn" class="active">
+      <i class="fas fa-school"></i> High School
+    </button>
+    <button id="collegeBtn">
+      <i class="fas fa-university"></i> College
+    </button>
+  </div>
+
+  <!-- Main container -->
+  <div class="container" id="calculator">
+    <!-- Section label -->
+    <div id="sectionLabel" class="section-label">High School Grades</div>
+
+    <!-- Default subject row -->
+    <div id="formArea">
+      <div class="form-group default-row" id="defaultRow">
+        <input type="text" placeholder="Subject Name" />
+        <input type="number" placeholder="Grade (%)" min="0" max="100" />
+      </div>
+    </div>
+
+    <!-- Add subject rectangle -->
+    <button class="add-btn" id="addSubjectBtn">
+      <i class="fas fa-plus-circle"></i> Add Subject
+    </button>
+    
+    <!-- Footer for results -->
+    <div class="result-footer">
+      <div class="result-label" id="resultLabel">Average Grade</div>
+      <div class="result-value" id="resultValue">0%</div>
+    </div>
+
+    <!-- Instructions -->
+    <div class="instructions">
+      <p><strong><i class="fas fa-info-circle"></i> How to use:</strong></p>
+      <ul>
+        <li>Select High School or College mode.</li>
+        <li>Enter your subjects and grades (units for College).</li>
+        <li>Click “+ Add Subject” to add more rows.</li>
+        <li>The system will automatically compute your average or GPA.</li>
+      </ul>
+    </div>
+  </div>
+
+ <script src="script.js"></script> 
+</body>
+</html>

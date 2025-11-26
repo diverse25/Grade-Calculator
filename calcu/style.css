@@ -1,0 +1,193 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  color: #000; /* ✅ default text color para hindi mag-white on white */
+}
+
+/* Title */
+.page-title {
+  margin: 20px 0 10px;
+  font-size: 2.2em;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Mode buttons */
+.mode-switch {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto 20px;
+  width: fit-content;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.mode-switch button {
+  min-width: 140px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.mode-switch button i {
+  margin-right: 6px;
+}
+
+body.highschool-mode .mode-switch button.active {
+  background-color: #b399d4;
+  color: white;
+}
+
+body.college-mode .mode-switch button.active {
+  background-color: #6bbf72;
+  color: white;
+}
+
+/* Container */
+.container {
+  max-width: 650px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Section label */
+.section-label {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* Subject rows */
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+  font-size: 0.95em;
+  color: #000; /* ✅ ensure inputs have visible text */
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,123,255,0.4);
+}
+
+.default-row {
+  background-color: #f9f9f9;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* Delete button */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #a71d2a;
+}
+
+/* Add subject rectangle */
+.add-btn {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #fff;
+  border: 2px dashed;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #000; /* ✅ visible text */
+}
+
+.add-btn i {
+  margin-right: 6px;
+}
+
+.add-btn:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.02);
+}
+
+body.highschool-mode .add-btn {
+  border-color: #b399d4;
+}
+
+body.college-mode .add-btn {
+  border-color: #6bbf72;
+}
+
+/* Result footer */
+.result-footer {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.result-label {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.result-value {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Instructions */
+.instructions {
+  text-align: left;
+  font-size: 0.95em;
+  color: #555;
+  margin-top: 20px;
+  line-height: 1.4;
+}
+
+/* Backgrounds */
+body.highschool-mode {
+  background-color: #e6d6f5;
+}
+
+body.college-mode {
+  background-color: #d4f5d6;
+}
+
+body.highschool-mode .result-footer {
+  background-color: #e6d6f5;
+}
+
+body.college-mode .result-footer {
+  background-color: #d4f5d6;
+}
